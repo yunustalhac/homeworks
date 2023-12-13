@@ -46,11 +46,11 @@ interface Todo {
 }
 
 const todos = reactive<Todo[]>([]);
-// onMounted(() => {
-//   fetch("https://jsonplaceholder.typicode.com/todos").then((r) => r.json()).then((todosData: Todo[]) => {
-//     todos.push(...todosData);
-//   });
-// }); </script>
+onMounted(() => {
+  fetch("https://jsonplaceholder.typicode.com/todos").then((r) => r.json()).then((todosData: Todo[]) => {
+    todos.push(...todosData);
+  });
+}); </script>
 
 <script lang="ts">
 export default {
